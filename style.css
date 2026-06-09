@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
+    /* IMAGEM DE FUNDO FIXA - Troque a URL abaixo pela sua imagem */
+    background-image: url(mar.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Overlay para escurecer o fundo e melhorar legibilidade */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+    background-image: url(chat3.webp);
+    box-shadow: 0 2px 20px rgba(106, 13, 173, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.logo:hover .logo-img {
+    animation: heartbeat 0.6s ease-in-out;
+}
+
+.logo-text {
+    color: #24134d;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* Animação do coração batendo */
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Versão responsiva para mobile */
+@media (max-width: 768px) {
+    .logo-img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .logo-text {
+        font-size: 1.1rem;
+    }
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFF340;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+}
+
+.nav-links a:hover {
+    color: #A855F7;
+    background: #F3E8FF;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient( rgba(139, 92, 246, 0.9), rgba(168, 85, 247, 0.01));
+    height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 0 0 80px 0px;
+}
+
+.hero-content {
+    color: white;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background: white;
+    color: #8B5CF6;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    background: #F3E8FF;
+    color: #6D28D9;
+}
+
+/* Intro Section */
+.intro {
+    padding: 4rem 0;
+    background: white;
+    border-radius: 30px;
+    margin: 10rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.intro-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-text h3 {
+    color: #8B5CF6;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4C1D95;
+}
+
+/* Significados */
+.significados {
+    padding: 2rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    margin: 10rem;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.significados h3 {
+    text-align: center;
+    color: #8B5CF6;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.significados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.significado-card {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #F3E8FF, #E9D5FF);
+    border-radius: 15px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.significado-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+}
+
+.significado-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.significado-card h4 {
+    color: #6D28D9;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.significado-card p {
+    color: #4C1D95;
+    line-height: 1.6;
+}
+
+/* Quote Destaque */
+.quote-destaque {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #8B5CF6, #A855F7);
+    margin: 2rem;
+    border-radius: 30px;
+}
+
+.quote-box {
+    text-align: center;
+    color: white;
+    padding: 1rem;
+}
+
+.quote-box p {
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.quote-box span {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Date Info */
+.date-info {
+    padding: 4rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    margin: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.date-card {
+    background: linear-gradient(135deg, #F3E8FF, #E9D5FF);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.date-card h3 {
+    color: #8B5CF6;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.date-card p {
+    font-size: 1.1rem;
+    color: #4C1D95;
+    line-height: 1.6;
+}
+
+.date-card strong {
+    color: #6D28D9;
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, #8B5CF6, #A855F7);
+    color: white;
+    text-align: center;
+    padding: 100px 0 60px;
+    margin-top: 70px;
+}
+
+.page-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* History Timeline */
+.history-content {
+    padding: 4rem 0;
+}
+
+.history-timeline {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+
+.timeline-year {
+    min-width: 150px;
+    font-weight: bold;
+    color: #8B5CF6;
+    font-size: 1.2rem;
+}
+
+.timeline-text h3 {
+    color: #6D28D9;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-text p {
+    color: #4C1D95;
+    line-height: 1.6;
+}
+
+/* Curiosidades */
+.curiosidades {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem;
+    border-radius: 30px;
+    margin-top: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.curiosidades h3 {
+    text-align: center;
+    color: #8B5CF6;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.curiosidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.curiosidade {
+    background: linear-gradient(135deg, #F3E8FF, #E9D5FF);
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.curiosidade h4 {
+    color: #6D28D9;
+    margin-bottom: 1rem;
+}
+
+.curiosidade p {
+    color: #4C1D95;
+}
+
+/* Ideias Grid */
+.ideias {
+    padding: 4rem 0;
+}
+
+.ideias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.ideia-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.ideia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+    background: white;
+}
+
+.ideia-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.ideia-card h3 {
+    color: #8B5CF6;
+    margin-bottom: 1rem;
+}
+
+.ideia-card p {
+    color: #4C1D95;
+    line-height: 1.6;
+}
+
+/* Mensagens Românticas */
+.mensagens-romanticas {
+    padding: 4rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    margin: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.mensagens-romanticas h3 {
+    text-align: center;
+    color: #8B5CF6;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.mensagens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.mensagem {
+    background: linear-gradient(135deg, #F3E8FF, #E9D5FF);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-left: 4px solid #8B5CF6;
+    transition: all 0.3s;
+}
+
+.mensagem:hover {
+    transform: translateX(5px);
+}
+
+.mensagem p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4C1D95;
+    font-style: italic;
+}
+
+/* Dicas */
+.dicas {
+    padding: 4rem 0;
+}
+
+.dicas-box {
+    background: linear-gradient(135deg, #8B5CF6, #A855F7);
+    padding: 3rem;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    margin: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.dicas-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.dicas-box p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.heart-decor {
+    font-size: 2rem;
+    animation: heartbeat 1.5s infinite;
+}
+
+/* Footer */
+footer {
+    background: #4C1D95;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+}
+
+.footer-note {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .timeline-year {
+        min-width: auto;
+    }
+    
+    .quote-box p {
+        font-size: 1.2rem;
+    }
+    
+    .significados-grid,
+    .ideias-grid,
+    .mensagens-grid,
+    .curiosidades-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .date-card {
+        padding: 1.5rem;
+    }
+    
+    .intro,
+    .significados,
+    .quote-destaque,
+    .date-info,
+    .mensagens-romanticas,
+    .dicas-box {
+        margin: 1rem;
+    }
+}
