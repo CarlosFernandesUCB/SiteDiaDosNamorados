@@ -7,7 +7,6 @@
 
 body {
     font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
-    /* IMAGEM DE FUNDO FIXA - Troque a URL abaixo pela sua imagem */
     background-image: url(mar.webp);
     background-attachment: fixed;
     background-position: center;
@@ -16,7 +15,6 @@ body {
     position: relative;
 }
 
-/* Overlay para escurecer o fundo e melhorar legibilidade */
 body::before {
     content: '';
     position: fixed;
@@ -27,7 +25,6 @@ body::before {
     z-index: -1;
 }
 
-/* Navbar */
 .navbar {
     background-image: url(chat3.webp);
     box-shadow: 0 2px 20px rgba(106, 13, 173, 0.2);
@@ -77,7 +74,6 @@ body::before {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-/* Animação do coração batendo */
 @keyframes heartbeat {
     0% {
         transform: scale(1);
@@ -90,7 +86,6 @@ body::before {
     }
 }
 
-/* Versão responsiva para mobile */
 @media (max-width: 768px) {
     .logo-img {
         width: 30px;
@@ -122,14 +117,12 @@ body::before {
     background: #F3E8FF;
 }
 
-/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-/* Hero Section */
 .hero {
     background: linear-gradient( rgba(139, 92, 246, 0.9), rgba(168, 85, 247, 0.01));
     height: 330px;
@@ -179,7 +172,6 @@ body::before {
     color: #6D28D9;
 }
 
-/* Intro Section */
 .intro {
     padding: 4rem 0;
     background: white;
@@ -206,7 +198,6 @@ body::before {
     color: #4C1D95;
 }
 
-/* Significados */
 .significados {
     padding: 2rem 0;
     background: rgba(255, 255, 255, 0.95);
@@ -258,7 +249,6 @@ body::before {
     line-height: 1.6;
 }
 
-/* Quote Destaque */
 .quote-destaque {
     padding: 4rem 0;
     background: linear-gradient(135deg, #8B5CF6, #A855F7);
@@ -283,7 +273,6 @@ body::before {
     opacity: 0.9;
 }
 
-/* Date Info */
 .date-info {
     padding: 4rem 0;
     background: rgba(255, 255, 255, 0.95);
@@ -315,7 +304,6 @@ body::before {
     color: #6D28D9;
 }
 
-/* Page Header */
 .page-header {
     background: linear-gradient(135deg, #8B5CF6, #A855F7);
     color: white;
@@ -329,7 +317,6 @@ body::before {
     margin-bottom: 1rem;
 }
 
-/* History Timeline */
 .history-content {
     padding: 4rem 0;
 }
@@ -366,7 +353,6 @@ body::before {
     line-height: 1.6;
 }
 
-/* Curiosidades */
 .curiosidades {
     background: rgba(255, 255, 255, 0.95);
     padding: 3rem;
@@ -403,7 +389,6 @@ body::before {
     color: #4C1D95;
 }
 
-/* Ideias Grid */
 .ideias {
     padding: 4rem 0;
 }
@@ -444,7 +429,6 @@ body::before {
     line-height: 1.6;
 }
 
-/* Mensagens Românticas */
 .mensagens-romanticas {
     padding: 4rem 0;
     background: rgba(255, 255, 255, 0.95);
@@ -485,7 +469,6 @@ body::before {
     font-style: italic;
 }
 
-/* Dicas */
 .dicas {
     padding: 4rem 0;
 }
@@ -517,7 +500,6 @@ body::before {
     animation: heartbeat 1.5s infinite;
 }
 
-/* Footer */
 footer {
     background: #4C1D95;
     color: white;
@@ -535,7 +517,6 @@ footer {
     opacity: 0.9;
 }
 
-/* Animações */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -556,7 +537,6 @@ footer {
     }
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
