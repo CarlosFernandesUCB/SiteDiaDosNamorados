@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
-    background-image: url('/IMG/mar.jpg');
+    background-image: url('mar.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
